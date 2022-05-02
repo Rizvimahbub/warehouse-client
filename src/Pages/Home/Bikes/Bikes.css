@@ -15,3 +15,8 @@
     font-weight: bolder;
     color: #444444;
 }
+
+.title-line{
+    border: 1px solid rgb(166, 0, 255);
+    height: 1px;
+}

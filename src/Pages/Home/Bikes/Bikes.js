@@ -1,6 +1,5 @@
 import React from 'react';
 import './Bikes.css';
-import Bike2 from '../../../Images/bike2.png';
 import { useEffect, useState } from 'react';
 import Bike from '../Bike/Bike';
 import { CardGroup } from 'react-bootstrap';
@@ -14,8 +13,9 @@ const Bikes = () => {
     }, [])
     return (
         <div id='bikes' className='my-5'>
-            <div>
-                <h1 className='text-center title'>Bikes</h1>
+            <div className='my-5 pe-5 w-75 mx-auto d-flex justify-content-between align-items-center'>
+                <h1 className='text-start ps-5  title'>Bikes</h1>
+                <div className='title-line w-75'></div>
             </div>
             <CardGroup>
                 <div className='container my-5'>
