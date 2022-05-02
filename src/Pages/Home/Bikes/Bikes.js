@@ -13,8 +13,8 @@ const Bikes = () => {
     }, [])
     return (
         <div id='bikes' className='my-5'>
-            <div className='my-5 pe-5 w-75 mx-auto d-flex justify-content-between align-items-center'>
-                <h1 className='text-start ps-5  title'>Bikes</h1>
+            <div className='my-5 w-75 mx-auto d-flex justify-content-around align-items-center'>
+                <h1 className='text-start  title'>Bikes</h1>
                 <div className='title-line w-75'></div>
             </div>
             <CardGroup>

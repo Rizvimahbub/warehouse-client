@@ -1,0 +1,18 @@
+.icon{
+    color: #CBCBCB;
+}
+
+.box{
+    border: 1px solid #CBCBCB;
+    border-bottom: 2px solid #CBCBCB;
+}
+
+.box:hover{
+    box-shadow: 0 10px 15px 0px #CBCBCB;
+    border-bottom: 2px solid rgb(164, 5, 250);
+}
+
+.box:hover .icon{
+
+    color: rgb(164, 5, 250);
+}

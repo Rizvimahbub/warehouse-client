@@ -17,7 +17,7 @@ const Header = () => {
                         </Nav>
                         <Nav>
                             <Nav.Link className=' fw-bolder fs-5'  href="home#bikes">Bikes</Nav.Link>
-                            <Nav.Link className=' fw-bolder fs-5' href="#pricing">Pricing</Nav.Link>
+                            <Nav.Link className=' fw-bolder fs-5' href="home#services">Services</Nav.Link>
                             <Nav.Link className=' fw-bolder fs-5' href="#deets">More deets</Nav.Link>
                             <Nav.Link className=' fw-bolder fs-5' href="#login">Login</Nav.Link>
                         </Nav>
