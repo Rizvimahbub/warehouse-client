@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lavishly+Yours&family=Lobster&family=PT+Serif:wght@700&family=Pacifico&family=Righteous&display=swap');
+
+
+.line{
+    border: 1px solid white;
+    height: 1px;
+}
+
+.footer{
+    background-color:  rgb(166, 0, 255);
+    font-family: 'PT Serif', serif;
+}
+
+.copy{
+    padding-left: 200px;
+}
+
+.links{
+    transform: translateX(0);
+    transition: 1s;
+}
+
+.links:hover{
+    text-decoration: underline;
+    transform: translateX(10px);
+}
+
+.arrow{
+    padding: 10px;
+}
+
+.arrow:hover{
+    background-color: rgb(250, 144, 106);
+    border-radius: 5px;
+}

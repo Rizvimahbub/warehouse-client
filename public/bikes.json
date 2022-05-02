@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "R15 M Connected ABS",
+        "price": "5700",
+        "description": "R15M comes with 282mm front and 220mm rear disc brakes with Anti-lock Braking System (ABS) Which means precise braking and restricted wheel lockups even when bike is at a high speed.",
+        "img": "https://www.bdprice.com.bd/wp-content/uploads/2021/09/Yamaha-R15M-Gray-Price-in-Bangladesh.jpg",
+        "supplier" : "YAMAHA",
+        "quantity" : "256"
+    },
+    {
+        "id": 2,
+        "name": "CBR 150R",
+        "price": "5600",
+        "description": "The Honda CBR150R bike is currently powered by a DOHC-6 speed engine. Its maximum power is 16.87 Bhp @ 9000 RPM and the maximum torque is 14.4 Nm @ 7000 RPM.",
+        "img": "https://www.bdprice.com.bd/wp-content/uploads/2022/03/Honda-CBR-150R-ABS-2021-Thailand-Tri-Color-Red-Price-in-Bangladesh.jpg",
+        "supplier" : "HONDA",
+        "quantity" : "182"
+    },
+    {
+        "id": 3,
+        "name": "GSX-R 150",
+        "price": "5000",
+        "description": "The GSX-R150 will be powered by a 147.3 cc single-cylinder liquid-cooled engine that puts out a maximum power of 19 hp at 11,000 rpm and a peak torque of 14 Nm at 8500 rpm.",
+        "img": "https://www.kablewala.com.bd/images/detailed/200/Suzuki-GSX-R-Dual-ABS-Yellow.jpg",
+        "supplier" : "SUZUKI",
+        "quantity" : "150"
+    },
+    {
+        "id": 4,
+        "name": "MT-15",
+        "price": "4700",
+        "description": "Yamaha MT-15 Version 2.0 is powered by 155 cc engine.This MT-15 Version 2.0 engine generates a power of 18.4 PS @ 10000 rpm and a torque of 14.1 Nm @ 7500 rpm.",
+        "img": "https://www.bdprice.com.bd/wp-content/uploads/2022/04/Yamaha-MT-15-V2-Cyan-price-in-Bangladesh.jpg",
+        "supplier" : "YAMAHA",
+        "quantity" : "385"
+    },
+    {
+        "id": 5,
+        "name": "CB ex motion",
+        "price": "5100",
+        "description": "This bike has 149 cc Engine which is Single Cylinder, DOHC, Liquid-Cooled, 4-Valve Engine. Its maximum power is 20.0 HP and the maximum torque is 14.50 NM. It uses a 6 speed Constant Mesh gear, and its maximum speed is 135 kilometres per hour.",
+        "img": "https://www.bikebaz.com/wp-content/uploads/2020/10/Honda-CB150R-ExMotion-Grey.jpg",
+        "supplier" : "HONDA",
+        "quantity" : "167"
+    },
+    {
+        "id": 6,
+        "name": "GSX-S",
+        "price": "4500",
+        "description": "Suzuki GSX-S150 is the naked version of GSX-R150 and uses the same engine as the faired cousin. It generates maximum power of 18.90 Bhp @ 10,500 rpm and maximum torque of 14 NM @ 9000 rpm.Maximum Torque inlcuding 45 kmpl Mileage and 135 kmph Top Speed.",
+        "img": "https://www.classyprice.com.bd/images/gsxs1.jpg",
+        "supplier" : "SUZUKI",
+        "quantity" : "220"
+    }
+]

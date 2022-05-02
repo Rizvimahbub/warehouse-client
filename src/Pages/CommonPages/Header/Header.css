@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lavishly+Yours&family=Lobster&family=PT+Serif:wght@700&family=Pacifico&family=Righteous&display=swap');
+
+img{
+    width: 150px;
+    background-color: none;
+}
+
+.navbar{
+    background-color: rgb(166, 0, 255);
+    font-family: 'PT Serif', serif;
+}
+
+.brand{
+    font-size: 40px;
+}
