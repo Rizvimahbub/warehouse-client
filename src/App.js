@@ -12,6 +12,7 @@ import Registration from './Pages/Shared/Registration/Registration';
 import GoogleSignIn from './Pages/Shared/GoogleSignIn/GoogleSignIn';
 import BikeInfo from './Pages/Home/BikeInfo/BikeInfo';
 
+
 function App() {
   return (
     <div className='App'>

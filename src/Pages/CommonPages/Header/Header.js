@@ -28,8 +28,8 @@ const Header = () => {
                         </Nav>
                         <Nav>
                             <Nav.Link className=' fw-bolder fs-5' as={Link}  to="home">Home</Nav.Link>
-                            <Nav.Link className=' fw-bolder fs-5' as={Link} to="/bikes">Bikes</Nav.Link>
-                            <Nav.Link className=' fw-bolder fs-5' as={Link} to="/services">Services</Nav.Link>
+                            <Nav.Link className=' fw-bolder fs-5' as={Link} to="home">Bikes</Nav.Link>
+                            <Nav.Link className=' fw-bolder fs-5' as={Link} to="home">Services</Nav.Link>
                             
                             {
                                 user?

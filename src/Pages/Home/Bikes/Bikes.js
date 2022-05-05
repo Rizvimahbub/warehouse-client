@@ -21,7 +21,7 @@ const Bikes = () => {
                 <div className='container my-5'>
                     {
                         bikes.map(bike => <Bike
-                            key={bike.id}
+                            key={bike._id}
                             bike={bike}
                         ></Bike>)
                     }

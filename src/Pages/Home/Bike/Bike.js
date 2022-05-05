@@ -5,7 +5,7 @@ import './Bike.css'
 
 const Bike = ({ bike }) => {
     
-    const { id, name, img, price, quantity, description, supplier } = bike;
+    const { _id, name, img, price, quantity, description, supplier } = bike;
     const navigate = useNavigate();
 
     const inventoryIdProcess = id => {
@@ -22,7 +22,7 @@ const Bike = ({ bike }) => {
                         <h4>{supplier}</h4>
                         <h5>Price : ${price}</h5>
                         <Card.Text>{description}</Card.Text>
-                        <button onClick={() => inventoryIdProcess(id)}>Stock Update</button>
+                        <button onClick={() => inventoryIdProcess(_id)}>Stock Update</button>
                     </Card.Body>
                         
                 </Card>
