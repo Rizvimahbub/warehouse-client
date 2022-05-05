@@ -1,18 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lavishly+Yours&family=Lobster&family=PT+Serif:wght@700&family=Pacifico&family=Righteous&display=swap');
 
 
-.line{
+.footer-line{
     border: 1px solid white;
     height: 1px;
+    width: 50%;
 }
 
 .footer{
-    background-color:  rgb(166, 0, 255);
+    background-color:  #893DFF;
     font-family: 'PT Serif', serif;
-}
-
-.copy{
-    padding-left: 200px;
 }
 
 .links{
@@ -27,9 +24,25 @@
 
 .arrow{
     padding: 10px;
+    color: white;
 }
 
 .arrow:hover{
-    background-color: rgb(250, 144, 106);
+    background-color: #7017f7;
     border-radius: 5px;
+}
+
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:10px;
+    width: 80%;
+}
+
+
+@media screen and (min-width:280px) and (max-width:831px){
+    .footer-container{
+        grid-template-columns: repeat(1,1fr);
+    }
 }

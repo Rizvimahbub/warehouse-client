@@ -1,0 +1,76 @@
+.quote-line{
+    border: 1px solid #893DFF;
+    height: 1px;
+    width: 30px;
+}
+
+.email a{
+    text-decoration: none;
+}
+
+.quote{
+    padding: 100px 0;
+    background-image: url(BMW.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.msg-btn{
+    background-color: #893DFF;
+    width: 25%;
+}
+
+.msg-btn:hover{
+    background-color: #a86eff;
+}
+
+.quote-container{
+    background-color: white;
+    width: 40%;
+}
+
+.input{
+    width: 70%;
+}
+
+.quote-heading{
+    width: 70%;
+}
+
+
+.quote-paragraph{
+    width: 70%;
+}
+
+@media screen and (min-width:280px) and (max-width:900px) {
+    .quote-container{
+        width: 95%;
+        padding-left: 10px ;
+        padding-right: 10px ;
+    }
+
+    .input{
+        width: 100%;
+    }
+
+    .msg-btn{
+        width: 70%;
+    }
+
+    .quote-heading{
+        width: 95%;
+    }
+    
+    
+    .quote-paragraph{
+        width: 95%;
+    }
+}
+
+
+@media screen and (min-width:300px) and (max-width:1450px){
+    .msg-btn{
+        width: 200px;
+    }
+}

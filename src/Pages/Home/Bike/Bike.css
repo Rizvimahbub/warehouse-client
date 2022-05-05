@@ -1,20 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lavishly+Yours&family=Lobster&family=PT+Serif:wght@700&family=Pacifico&family=Righteous&display=swap');
 
 .cart{
-    box-shadow: 0px 0px 3px 3px;
+    box-shadow: 0 1px 15px 2px #CBCBCB;
     font-family: 'PT Serif', serif;
 }
 
-button{
+.card button{
     padding: 10px;
     width: 200px;
     border-radius: 5px;
     border: none;
-    background-color: rgb(195, 103, 245);
+    background-color: #893DFF;
     color: white;
     font-weight: 700;
 }
 
-button:hover{
-    background-color: rgb(164, 5, 250);
+.card button:hover{
+    background-color: #a86eff;
+}
+
+.card{
+    border: none;
 }

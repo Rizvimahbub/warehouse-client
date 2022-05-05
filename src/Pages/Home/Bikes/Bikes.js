@@ -7,15 +7,15 @@ import { CardGroup } from 'react-bootstrap';
 const Bikes = () => {
     const [bikes, setBikes] = useState([]);
     useEffect(() => {
-        fetch('bikes.json')
+        fetch('http://localhost:5000/bike')
             .then(res => res.json())
             .then(data => setBikes(data))
     }, [])
     return (
         <div id='bikes' className='my-5'>
-            <div className='my-5 w-75 mx-auto d-flex justify-content-around align-items-center'>
-                <h1 className='text-start  title'>Bikes</h1>
-                <div className='title-line w-75'></div>
+            <div className='my-5 w-75 mx-auto'>
+                <h1 className='text-center  title'>Bikes</h1>
+                <div className='title-line mx-auto'></div>
             </div>
             <CardGroup>
                 <div className='container my-5'>
