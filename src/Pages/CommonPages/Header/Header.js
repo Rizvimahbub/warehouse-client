@@ -21,7 +21,7 @@ const Header = () => {
         <div>
             <Navbar  className='navbar' collapseOnSelect expand="lg" variant="dark">
                 <Container>
-                    <Navbar.Brand className='fw-bolder brand' href="home">Bikescape</Navbar.Brand>
+                    <Navbar.Brand className='fw-bolder brand' href="#home">Bikescape</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
