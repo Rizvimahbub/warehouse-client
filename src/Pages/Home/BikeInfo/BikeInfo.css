@@ -1,5 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lavishly+Yours&family=Lobster&family=PT+Serif:wght@700&family=Pacifico&family=Righteous&display=swap');
 
 .bikeInfo{
-    font-family: 'PT Serif', serif;;
+    font-family: 'PT Serif', serif;
+}
+
+.delivered-btn{
+    padding: 10px;
+    width: 11%;
+    border-radius: 5px;
+    border: none;
+    background-color: #893DFF;
+    color: white;
+    font-weight: 700;
+}
+
+
+.delivered-btn:hover{
+    background-color: #a86eff;
+}
+
+
+.add-btn{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #893DFF;
+    color: white;
+    font-weight: 700;
+}
+
+
+.add-btn:hover{
+    background-color: #a86eff;
 }
