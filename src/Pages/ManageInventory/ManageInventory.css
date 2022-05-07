@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lavishly+Yours&family=Lobster&family=PT+Serif:wght@700&family=Pacifico&family=Righteous&display=swap');
+
+
+.inventory-section{
+    font-family: 'PT Serif', serif;
+}
+
+.inventory-title{
+    font-size: 60px;
+}
+
+.inventory-cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+@media screen and (min-width:280px) and (max-width:1600px){
+    .inventory-cards{
+        grid-template-columns: 1fr;
+    }
+}

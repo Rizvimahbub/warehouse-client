@@ -76,8 +76,7 @@
 
 
 @media screen and (min-width:280px) and (max-width:390px){
-    .submit-btn{
-        
+    .submit-btn{ 
         width: 100%;
     }
 }

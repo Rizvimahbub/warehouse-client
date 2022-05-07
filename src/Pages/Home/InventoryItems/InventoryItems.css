@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lavishly+Yours&family=Lobster&family=PT+Serif:wght@700&family=Pacifico&family=Righteous&display=swap');
+
+
+
+.card-item{
+    box-shadow: 0px 0px 10px 1px;
+    border-radius: 10px;
+    align-self: center;
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    font-family: 'PT Serif', serif;
+}
+
+
+.card-item:hover{
+    transform: scale(1.2);
+    transition: .8s;
+    transition-timing-function: ease-in-out;
+    background-color: white;
+}
+
+.item-btn{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #893DFF;
+    color: white;
+    font-weight: 700;
+    width: 35%;
+    margin-bottom: 10px;
+}
+
+.item-btn:hover{
+    background-color: #a86eff;
+}
+
+@media screen and (min-width:1251px) and (max-width:1500px) {
+    .card-item{
+        width: 60%;
+    } 
+}
+
+
+@media screen and (min-width:1501px) and (max-width:1600px) {
+    .card-item{
+        width: 50%;
+    } 
+}
+
+
+@media screen and (min-width:1181px) and (max-width:1250px) {
+    .card-item{
+        width: 65%;
+    } 
+}
+
+
+@media screen and (min-width:1001px) and (max-width:1180px) {
+    .card-item{
+        width: 75%;
+    } 
+}
+
+
+@media screen and (min-width:280px) and (max-width:570px) {
+    .card-item{
+        width: 90%;
+    } 
+}
+
+
+@media screen and (min-width:571px) and (max-width:1000px) {
+    .card-item{
+        width: 65%;
+    } 
+
+    .item-btn{
+        width: 30%;
+    }
+}
+
+
+@media screen and (min-width:280px) and (max-width:360px) {
+
+    .item-btn{
+        width: 90%;
+    }
+}
+
+
+@media screen and (min-width:361px) and (max-width:430px) {
+
+    .item-btn{
+        width: 60%;
+    }
+}
+
+
+@media screen and (min-width:431px) and (max-width:570px) {
+
+    .item-btn{
+        width: 45%;
+    }
+}
+
+
+@media screen and (min-width:280px) and (max-width:1000px) {
+    .card-item{
+        grid-template-columns: 1fr;
+    }
+    
+
+}

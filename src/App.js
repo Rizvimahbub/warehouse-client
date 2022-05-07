@@ -15,6 +15,9 @@ import ManageInventory from './Pages/ManageInventory/ManageInventory';
 import Form from './Pages/Form/Form';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import Spinner from './Pages/Shared/Spinner/Spinner';
+import InventoryItems from './Pages/Home/InventoryItems/InventoryItems';
+import SingleProduct from './Pages/Home/Orders/Orders';
+import Orders from './Pages/Home/Orders/Orders';
 
 
 function App() {
@@ -31,6 +34,8 @@ function App() {
         <Route path='/form' element={<Form></Form>}></Route>
         <Route path='/spinner' element={<Spinner></Spinner>}></Route>
         <Route path='/inventory' element={<ManageInventory></ManageInventory>}></Route>
+        <Route path='/orders' element={<Orders></Orders>}></Route>
+        <Route path='/inventoryItems' element={<InventoryItems></InventoryItems>}></Route>
         <Route path='/register' element={<Registration></Registration>}></Route>
         <Route path='/googleSignIn' element={<GoogleSignIn></GoogleSignIn>}></Route>
         <Route path='/bike/:id' element={
