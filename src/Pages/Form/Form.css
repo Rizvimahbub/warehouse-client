@@ -1,5 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lavishly+Yours&family=Lobster&family=PT+Serif:wght@700&family=Pacifico&family=Righteous&display=swap');
 
-.form{
+.form-body{
     font-family: 'PT Serif', serif;
+    background-image: url(Wallpaper.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.form-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 80%; 
+}
+
+.form-vector img{
+    width: 100%;
+}
+
+.form-info{
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: white;
+    align-self: center;
+    color: #444444;
+}
+
+.submit-btn{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #893DFF;
+    color: white;
+    font-weight: 700;
+    width: 40%;
+}
+
+.input-div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 0 10px;
+}
+
+
+@media screen and (min-width:280px) and (max-width:1590px){
+    .input-div{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media screen and (min-width:280px) and (max-width:1000px){
+    .form-container{
+        grid-template-columns: 1fr;
+        width: 50%;
+        padding-bottom: 5%;
+        border: 1px solid red;
+    }
+}
+
+
+@media screen and (min-width:280px) and (max-width:600px){
+    .form-container{
+        grid-template-columns: 1fr;
+        width: 80%;
+        padding-bottom: 5%;
+        border: 1px solid red;
+    }
+}
+
+
+@media screen and (min-width:280px) and (max-width:390px){
+    .submit-btn{
+        
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width:1000px) and (max-width:1400px){
+    .form-vector img{
+        height: 600px;
+    }
 }

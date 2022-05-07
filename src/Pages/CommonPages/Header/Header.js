@@ -34,7 +34,7 @@ const Header = () => {
                             
                             {
                                 user?
-                                <button style={{backgroundColor:'#893DFF', color:'white', border:'none', }} onClick={signOutProcess}>Sign out</button>
+                                <Nav.Link onClick={signOutProcess} className=' fw-bolder fs-5' as={Link} to="login">Sign out</Nav.Link>
                                 :
                                 <Nav.Link className=' fw-bolder fs-5' as={Link} to="login">Login</Nav.Link>
                             }

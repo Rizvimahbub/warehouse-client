@@ -1,7 +1,16 @@
 import React from 'react';
-import './Quote.css'
+import { useNavigate } from 'react-router-dom';
+import './Quote.css';
+
 
 const Quote = () => {
+
+    const navigate = useNavigate();    
+
+    const navigateToInventory = () => {
+        navigate('/inventory')
+    }
+
     return (
         <div>
             <div className='my-5 w-75 mx-auto'>
@@ -20,7 +29,8 @@ const Quote = () => {
                         <input className='input border border-1 rounded-3 mb-2 p-2' type='number' name='number' placeholder='Phone'></input><br />
                         <input className='input border border-1 rounded-3 mb-2 p-2' type='text' name='subject' placeholder='Subject'></input><br />
                         <textarea className='input border border-1 rounded-3 mb-2 p-2' placeholder='Message'></textarea><br />
-                        <input className='msg-btn rounded-3 border-0 fw-bold text-white p-2' type='submit' value='Send Message'></input>
+                        <button className='add-btn mb-2 me-2'>Submit</button>
+                        <button onClick={navigateToInventory} className='add-btn mb-2 me-2'>Inventory</button>
                     </form>
                 </div>
 

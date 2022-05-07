@@ -2,14 +2,16 @@ import React, { useRef, useState } from 'react';
 import './Login.css';
 import Vector from './Image/Vector.png';
 
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../authentification.init';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import GoogleSignIn from '../GoogleSignIn/GoogleSignIn';
+import Spinner from '../Spinner/Spinner';
 
 
 const Login = () => {
     const [error, setError] = useState('');
+    const location = useLocation();
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
@@ -29,6 +31,9 @@ const Login = () => {
         }
     }
 
+    let from = location.state ?. from ?. pathname || '/' ;
+    
+
     const passwordResetProcess = async() => {
         const email = emailRef.current.value;
         console.log(email)
@@ -38,7 +43,11 @@ const Login = () => {
 
 
     if (user) {
-        navigate('/home')
+        navigate(from, {locaton : true})
+    }
+
+    if(loading || sending){
+        return <Spinner></Spinner>
     }
 
     const navigateToRegister = () => {

@@ -13,6 +13,8 @@ import GoogleSignIn from './Pages/Shared/GoogleSignIn/GoogleSignIn';
 import BikeInfo from './Pages/Home/BikeInfo/BikeInfo';
 import ManageInventory from './Pages/ManageInventory/ManageInventory';
 import Form from './Pages/Form/Form';
+import RequireAuth from './Pages/RequireAuth/RequireAuth';
+import Spinner from './Pages/Shared/Spinner/Spinner';
 
 
 function App() {
@@ -27,10 +29,15 @@ function App() {
         <Route path='/quote' element={<Quote></Quote>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/form' element={<Form></Form>}></Route>
+        <Route path='/spinner' element={<Spinner></Spinner>}></Route>
         <Route path='/inventory' element={<ManageInventory></ManageInventory>}></Route>
         <Route path='/register' element={<Registration></Registration>}></Route>
         <Route path='/googleSignIn' element={<GoogleSignIn></GoogleSignIn>}></Route>
-        <Route path='/bike/:id' element={<BikeInfo></BikeInfo>}></Route>
+        <Route path='/bike/:id' element={
+          <RequireAuth>
+            <BikeInfo></BikeInfo>
+          </RequireAuth>
+        }></Route>
 
       </Routes>
       <Footer></Footer>

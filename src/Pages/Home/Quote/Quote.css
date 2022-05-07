@@ -16,12 +16,17 @@
     background-size: cover;
 }
 
-.msg-btn{
+.add-btn{
+    width: 20%;
+    padding: 10px;    
+    border-radius: 5px;
+    border: none;
     background-color: #893DFF;
-    width: 25%;
+    color: white;
+    font-weight: 700;
 }
 
-.msg-btn:hover{
+.add-btn:hover{
     background-color: #a86eff;
 }
 
@@ -43,6 +48,38 @@
     width: 70%;
 }
 
+
+@media screen and (min-width:280px) and (max-width:470px) {
+    .add-btn{
+        width: 45%;
+    }
+}
+
+@media screen and (min-width:471px) and (max-width:900px) {
+    .add-btn{
+        width: 30%;
+    }
+}
+
+
+@media screen and (min-width:901px) and (max-width:1301px) {
+    .add-btn{
+        width: 40%;
+    }
+}
+
+@media screen and (min-width:1301px) and (max-width:1500px) {
+    .add-btn{
+        width: 35%;
+    }
+}
+
+@media screen and (min-width:1501px) and (max-width:2000px) {
+    .add-btn{
+        width: 25%;
+    }
+}
+
 @media screen and (min-width:280px) and (max-width:900px) {
     .quote-container{
         width: 95%;
@@ -54,9 +91,6 @@
         width: 100%;
     }
 
-    .msg-btn{
-        width: 70%;
-    }
 
     .quote-heading{
         width: 95%;
@@ -69,8 +103,3 @@
 }
 
 
-@media screen and (min-width:300px) and (max-width:1450px){
-    .msg-btn{
-        width: 200px;
-    }
-}
