@@ -13,13 +13,13 @@ const Header = () => {
 
     const signOutProcess = () => {
         signOut(auth)
-        .then(() => {
-            navigate('/login')
-          })
+            .then(() => {
+                navigate('/login')
+            })
     }
     return (
         <div>
-            <Navbar  className='navbar' collapseOnSelect expand="lg" variant="dark">
+            <Navbar className='navbar' collapseOnSelect expand="lg" variant="dark">
                 <Container>
                     <Navbar.Brand className='fw-bolder brand' href="#home">Bikescape</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -27,19 +27,27 @@ const Header = () => {
                         <Nav className="me-auto">
                         </Nav>
                         <Nav>
-                            <Nav.Link className=' fw-bolder fs-5' as={Link}  to="home">Home</Nav.Link>
-                            <Nav.Link className=' fw-bolder fs-5' as={Link} to="home">Bikes</Nav.Link>
-                            <Nav.Link className=' fw-bolder fs-5' as={Link} to="home">Services</Nav.Link>
-                            <Nav.Link className=' fw-bolder fs-5' as={Link} to="form">Add Item</Nav.Link>
-                            <Nav.Link className=' fw-bolder fs-5' as={Link} to="orders">Orders</Nav.Link>
+                            <Nav.Link className=' fw-bolder fs-5' as={Link} to="home">Home</Nav.Link>
+                            <Nav.Link className=' fw-bolder fs-5' as={Link} to="about">About</Nav.Link>
                             
+
+
                             {
-                                user?
-                                <Nav.Link onClick={signOutProcess} className=' fw-bolder fs-5' as={Link} to="login">Sign out</Nav.Link>
-                                :
-                                <Nav.Link className=' fw-bolder fs-5' as={Link} to="login">Login</Nav.Link>
+                                user &&
+                                <>
+                                    <Nav.Link className=' fw-bolder fs-5' as={Link} to="inventory">Manage Inventory</Nav.Link>
+                                    <Nav.Link className=' fw-bolder fs-5' as={Link} to="form">Add Item</Nav.Link>
+                                    <Nav.Link className=' fw-bolder fs-5' as={Link} to="orders">Orders</Nav.Link>
+                                </>
                             }
-                            
+
+                            {
+                                user ?
+                                    <Nav.Link onClick={signOutProcess} className=' fw-bolder fs-5' as={Link} to="login">Sign out</Nav.Link>
+                                    :
+                                    <Nav.Link className=' fw-bolder fs-5' as={Link} to="login">Login</Nav.Link>
+                            }
+
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

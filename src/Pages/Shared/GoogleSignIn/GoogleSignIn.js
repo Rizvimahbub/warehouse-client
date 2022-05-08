@@ -1,11 +1,18 @@
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../authentification.init";
 import Google from './Image/Google.png';
 
 
 const GoogleSignIn = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const location = useLocation();
+    const navigate = useNavigate();
+    let from = location.state ?. from ?. pathname || '/' ;
 
+    if (user) {
+        navigate(from, {locaton : true})
+    }
     
     return (
         <div>

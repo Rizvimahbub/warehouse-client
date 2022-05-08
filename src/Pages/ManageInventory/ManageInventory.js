@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './ManageInventory.css';
-import { CardGroup } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
 import InventoryItems from '../Home/InventoryItems/InventoryItems';
+import Title from '../CommonPages/Title/Title';
 
 const ManageInventory = () => {
     const [products, setProducts] = useState([]);
@@ -12,8 +11,11 @@ const ManageInventory = () => {
             .then(data => {setProducts(data)})
     }, [products])
 
+    
+
     return (
         <div className='inventory-section'>
+            <Title title='Manage Inventory'></Title>
             <h1 className='inventory-title text-center mb-5'>Bikes</h1>
             <div className='inventory-cards m-5'>
                 {

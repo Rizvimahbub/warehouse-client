@@ -1,5 +1,6 @@
 import Vector from './Form.png';
 import './Form.css';
+import Title from '../CommonPages/Title/Title';
 
 
 const Form = () => {
@@ -26,6 +27,7 @@ const Form = () => {
     }
     return (
         <div className='form-body'>
+            <Title title='Add Item'></Title>
             <div className='form-container bg-white'>
                 <div className='form-vector'>
                     <img src={Vector}></img>

@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../authentification.init';
 import './InventoryItems.css';
 
 const InventoryItems = ({product}) => {
+    const [user] = useAuthState(auth);
     const {_id, name, url, description, quantity, price, supplier} = product;
     const [bikeQuantity, setBikeQuantity] = useState(0);
 
@@ -34,14 +37,16 @@ const InventoryItems = ({product}) => {
 
     const button = _id => {
         const id = product._id;
+        const email = user.email;
         const name = product.name;
         const url = product.url;
         const description = product.description;
-        const newQuantity = bikeQuantity + 1;
+        const oldQuantity = bikeQuantity;
+        const newQuantity = oldQuantity + 1;
         setBikeQuantity(newQuantity);
         const quantity = newQuantity;
         const supplier = product.supplier;
-        const props = {id,name,url,description,quantity,supplier}
+        const props = { id, name, url, description, quantity, supplier, email }
 
         fetch(`http://localhost:5000/orders/${_id}`, {
             method : 'PUT',
@@ -56,6 +61,7 @@ const InventoryItems = ({product}) => {
   
     return (
         <div className='card-item mb-5 mx-auto'>
+            
             <div>
                 <img className='w-100 ' src={url}/>
             </div>

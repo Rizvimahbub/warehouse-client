@@ -7,6 +7,8 @@ import auth from '../../../authentification.init';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import GoogleSignIn from '../GoogleSignIn/GoogleSignIn';
 import Spinner from '../Spinner/Spinner';
+import Title from '../../CommonPages/Title/Title';
+import toast, { Toaster } from 'react-hot-toast';
 
 
 const Login = () => {
@@ -21,14 +23,15 @@ const Login = () => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        signInWithEmailAndPassword(email, password);
         if (loginError || passwordResetError) {
-            setError(<p className='text-danger'>{loginError?.message} {passwordResetError?.message}</p>)
+            setError(<p className='text-danger'>{loginError?.message}</p>)
             return loginProcess;
         }
         else{
             setError('')
         }
+        signInWithEmailAndPassword(email, password);
+        
     }
 
     let from = location.state ?. from ?. pathname || '/' ;
@@ -37,8 +40,15 @@ const Login = () => {
     const passwordResetProcess = async() => {
         const email = emailRef.current.value;
         console.log(email)
+        if (passwordResetError) {
+            setError(<p className='text-danger'>{passwordResetError?.message}</p>)
+            return passwordResetProcess;
+        }
+        else{
+            setError('')
+        }
         await sendPasswordResetEmail(email);
-        alert('password sent')
+        toast('Please check your email')
     }
 
 
@@ -57,7 +67,7 @@ const Login = () => {
 
     return (
         <div className='login d-flex justify-content-center align-items-center'>
-
+            <Title title='Login'></Title>
             <div className=' login-container d-flex bg-white row'>
                 <div className='vector col-lg-8 col-md-12 col-sm-12'>
                     <img className='w-100' src={Vector}></img>
@@ -78,6 +88,7 @@ const Login = () => {
                         <GoogleSignIn></GoogleSignIn>
                         <p>Don't have an account yet? <span onClick={navigateToRegister} className='span'>Sign up</span></p>
                     </form>
+                    <Toaster></Toaster>
                 </div>
             </div>
         </div>

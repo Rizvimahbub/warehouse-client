@@ -18,6 +18,8 @@ import Spinner from './Pages/Shared/Spinner/Spinner';
 import InventoryItems from './Pages/Home/InventoryItems/InventoryItems';
 import SingleProduct from './Pages/Home/Orders/Orders';
 import Orders from './Pages/Home/Orders/Orders';
+import NotFound from './Pages/Shared/NotFound/NotFound';
+import About from './Pages/About/About';
 
 
 function App() {
@@ -33,9 +35,21 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/form' element={<Form></Form>}></Route>
         <Route path='/spinner' element={<Spinner></Spinner>}></Route>
-        <Route path='/inventory' element={<ManageInventory></ManageInventory>}></Route>
-        <Route path='/orders' element={<Orders></Orders>}></Route>
-        <Route path='/inventoryItems' element={<InventoryItems></InventoryItems>}></Route>
+        <Route path='/inventory' element={
+          <RequireAuth>
+            <ManageInventory></ManageInventory>
+          </RequireAuth>
+        }></Route>
+        <Route path='/orders' element={
+          <RequireAuth>
+            <Orders></Orders>
+          </RequireAuth>
+        }></Route>
+        <Route path='/inventoryItems' element={
+          <RequireAuth>
+            <InventoryItems></InventoryItems>
+          </RequireAuth>
+        }></Route>
         <Route path='/register' element={<Registration></Registration>}></Route>
         <Route path='/googleSignIn' element={<GoogleSignIn></GoogleSignIn>}></Route>
         <Route path='/bike/:id' element={
@@ -43,7 +57,8 @@ function App() {
             <BikeInfo></BikeInfo>
           </RequireAuth>
         }></Route>
-
+        <Route path='/about' element={<About></About>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
