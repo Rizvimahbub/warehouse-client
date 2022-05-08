@@ -9,34 +9,50 @@ import GoogleSignIn from '../GoogleSignIn/GoogleSignIn';
 import Spinner from '../Spinner/Spinner';
 import Title from '../../CommonPages/Title/Title';
 import toast, { Toaster } from 'react-hot-toast';
+import axios from 'axios';
 
 
 const Login = () => {
     const [error, setError] = useState('');
     const location = useLocation();
+    let from = location.state ?. from ?. pathname || '/' ;
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
-    const [signInWithEmailAndPassword, user, loading, loginError,] = useSignInWithEmailAndPassword(auth);
+    const [signInWithEmailAndPassword, user,loading,loginError] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail, sending, passwordResetError] = useSendPasswordResetEmail(auth);
-    const loginProcess = event => {
+    const loginProcess = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        if (loginError || passwordResetError) {
+        
+        await signInWithEmailAndPassword(email, password);
+        if (loginError) {
             setError(<p className='text-danger'>{loginError?.message}</p>)
-            return loginProcess;
         }
         else{
             setError('')
         }
-        signInWithEmailAndPassword(email, password);
+        
+        const {data} = await axios.post('http://localhost:5000/login',{email})
+        localStorage.setItem('Token', data.token);
+        
+
         
     }
 
-    let from = location.state ?. from ?. pathname || '/' ;
-    
 
+    if(loading || sending){
+        return <Spinner></Spinner>
+    }
+    
+    if (user) {
+        navigate(from, {locaton : true})
+    }
+    
+    
+    
+    
     const passwordResetProcess = async() => {
         const email = emailRef.current.value;
         console.log(email)
@@ -52,13 +68,11 @@ const Login = () => {
     }
 
 
-    if (user) {
-        navigate(from, {locaton : true})
-    }
+    
 
-    if(loading || sending){
-        return <Spinner></Spinner>
-    }
+    
+
+    
 
     const navigateToRegister = () => {
         navigate('/register')

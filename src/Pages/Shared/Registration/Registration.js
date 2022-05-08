@@ -48,9 +48,9 @@ const Registration = () => {
     
 
     if (user) {
-        // if (!user.emailVerified) {
-        //     return alert('Please your email')
-        // }
+        if (!user.emailVerified) {
+            return alert('Please your email')
+        }
         navigate('/home');
         console.log(user)
     }
