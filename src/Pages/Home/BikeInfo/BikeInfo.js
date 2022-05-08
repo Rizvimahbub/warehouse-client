@@ -10,7 +10,7 @@ const BikeInfo = () => {
     const [quantity, setQuantity] = useState();
     const [increaseQuantity, setIncreaseQuantity] = useState();
     useEffect(() => {
-        fetch(`http://localhost:5000/bike/${id}`)
+        fetch(`https://aqueous-gorge-58416.herokuapp.com/bike/${id}`)
             .then(res => res.json())
             .then(data => setBikes(data))
     }, [id])
@@ -22,7 +22,7 @@ const BikeInfo = () => {
         setQuantity(bike.quantity);
 
 
-        fetch(`http://localhost:5000/bike/${id}`, {
+        fetch(`https://aqueous-gorge-58416.herokuapp.com/bike/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -44,7 +44,7 @@ const BikeInfo = () => {
         setQuantity(bike.quantity);
 
 
-        fetch(`http://localhost:5000/bike/${id}`, {
+        fetch(`https://aqueous-gorge-58416.herokuapp.com/bike/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

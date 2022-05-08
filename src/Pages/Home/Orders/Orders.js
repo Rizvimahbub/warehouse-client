@@ -12,7 +12,7 @@ const Orders = () => {
     const email = user.email;
     useEffect(() => {
         try {
-            fetch(`http://localhost:5000/orders?email=${email}`, {
+            fetch(`https://aqueous-gorge-58416.herokuapp.com/orders?email=${email}`, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('Token')}`
                 }
@@ -33,7 +33,7 @@ const Orders = () => {
     const removeProcess = id => {
         const alert = window.confirm('Are you sure you want to delete?');
         if (alert) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://aqueous-gorge-58416.herokuapp.com/orders/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())

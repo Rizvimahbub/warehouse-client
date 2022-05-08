@@ -7,7 +7,7 @@ import { CardGroup } from 'react-bootstrap';
 const Bikes = () => {
     const [bikes, setBikes] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/bike')
+        fetch('https://aqueous-gorge-58416.herokuapp.com/bike')
             .then(res => res.json())
             .then(data => setBikes(data))
     }, [])

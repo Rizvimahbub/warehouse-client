@@ -6,7 +6,7 @@ import Title from '../CommonPages/Title/Title';
 const ManageInventory = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/inventory')
+        fetch('https://aqueous-gorge-58416.herokuapp.com/inventory')
             .then(res => res.json())
             .then(data => {setProducts(data)})
     }, [products])

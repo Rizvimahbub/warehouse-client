@@ -15,7 +15,7 @@ const Form = () => {
         const info = { name, supplier, price, quantity, url, description };
         event.target.reset()
 
-        fetch('http://localhost:5000/inventory', {
+        fetch('https://aqueous-gorge-58416.herokuapp.com/inventory', {
             method : 'POST',
             headers : {
                 'content-type' : 'application/json'

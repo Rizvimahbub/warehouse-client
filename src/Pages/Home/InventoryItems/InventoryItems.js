@@ -10,7 +10,7 @@ const InventoryItems = ({product}) => {
 
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/inventory')
+        fetch('https://aqueous-gorge-58416.herokuapp.com/inventory')
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
@@ -21,7 +21,7 @@ const InventoryItems = ({product}) => {
     const removeProcess = id => {
         const alert = window.confirm('Are you sure you want to delete?');
         if (alert) {
-            fetch(`http://localhost:5000/inventory/${id}`, {
+            fetch(`https://aqueous-gorge-58416.herokuapp.com/inventory/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())
@@ -48,7 +48,7 @@ const InventoryItems = ({product}) => {
         const supplier = product.supplier;
         const props = { id, name, url, description, quantity, supplier, email }
 
-        fetch(`http://localhost:5000/orders/${_id}`, {
+        fetch(`https://aqueous-gorge-58416.herokuapp.com/orders/${_id}`, {
             method : 'PUT',
             headers : {
                 'content-type' : 'application/json'
